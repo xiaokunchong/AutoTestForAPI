@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name="我是套件测试">
+    <test name="Login">
+        <classes>
+            <class name="com.course.testNG.Suit.suitConfig"/>
+            <class name="com.course.testNG.Suit.loginTest"/>
+        </classes>
+
+    </test>
+
+    <test name = "Pay" >
+        <classes>
+            <class name ="com.course.testNG.Suit.suitConfig"/>
+            <class name="com.course.testNG.Suit.payTest"/>
+        </classes>
+
+    </test>
+
+</suite>

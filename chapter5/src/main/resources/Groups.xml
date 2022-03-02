@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name="groupTest">
+    <test name="firstGroup">
+
+<!--        这里就是定义跑哪个组的，前提是执行类已经被标记分组，-->
+<!--        比如以下的StudentClass1、StudentClass1和TeacherClass都已经被标记为组&ndash;&gt;-->
+        <groups>
+            <run>
+                <include name ='CLASS2' />
+            </run>
+        </groups>
+
+        <classes>
+            <class name="com.course.testNG.Groups.StudentClass1" />
+            <class name="com.course.testNG.Groups.StudentClass2" />
+            <class name="com.course.testNG.Groups.TeacherClass" />
+        </classes>
+    </test>
+
+</suite>

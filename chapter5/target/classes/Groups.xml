@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name="groupTest">
+    <test name="firstGroup">
+        <groups>
+            <run>
+                <include name ='CLASS2' />
+            </run>
+        </groups>
+
+        <classes>
+            <class name="com.course.testNG.Groups.StudentClass1" />
+            <class name="com.course.testNG.Groups.StudentClass2" />
+            <class name="com.course.testNG.Groups.TeacherClass" />
+        </classes>
+    </test>
+
+
+    <test name="towGroup">
+        <groups>
+            <run>
+                <include name ='1' />
+            </run>
+        </groups>
+
+        <classes>
+            <class name="com.course.testNG.Groups.StudentClass1" />
+            <class name="com.course.testNG.Groups.StudentClass2" />
+            <class name="com.course.testNG.Groups.TeacherClass" />
+        </classes>
+
+    </test>
+
+
+</suite>
