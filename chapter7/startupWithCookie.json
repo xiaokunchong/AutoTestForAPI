@@ -1,0 +1,46 @@
+[
+  {
+    "description": "这是一个带cookie的get请求",
+    "request": {
+      "method":"get",
+      "uri": "/get/withCookiesGetDemo",
+      "cookies": {
+        "login": "ture"
+      }
+    },
+
+
+    "response": {
+      "text": "这是一个带需要携带cookie信息才能访问的的get请求",
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      }
+    }
+  },
+
+  {
+    "description": "这是一个需要带cookies的post请求，其中请求方式是json",
+    "request": {
+      "method":"post",
+      "uri": "/post/withCookiesPostDemo",
+      "cookies": {
+        "login": "ture"
+      },
+      "json":{
+      "name": "xiaokunchong",
+        "age": "20"
+      }
+    },
+
+    "response": {
+      "status": 200,
+      "json":{
+        "huhansan": "success",
+        "status":"yes",
+        "text":"这次返回的是一个json数据"
+      }
+    }
+
+  }
+
+]

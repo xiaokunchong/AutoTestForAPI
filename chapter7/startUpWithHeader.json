@@ -1,0 +1,23 @@
+[
+  {
+    "description": "这是一个带header请求的demo",
+    "request":{
+      "uri": "/post/withHeaders",
+      "method": "post",
+      "headers": {
+        "content-type": "application/json"
+      },
+      "queries": {
+        "name": "xiaokunchong",
+        "age": "18"
+      }
+    },
+
+    "response": {
+      "json": {
+        "name": "xiaokunchong",
+        "age": "20"
+      }
+    }
+  }
+]

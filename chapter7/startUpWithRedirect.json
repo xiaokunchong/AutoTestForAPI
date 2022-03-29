@@ -1,0 +1,36 @@
+[
+  {
+    "description": "重定向到指定网址",
+    "request":{
+      "uri": "/get/redirection"
+
+    },
+    "redirectTo":"http://www.baidu.com"
+  },
+
+  {
+    "description": "这是一个指定路径",
+    "request":{
+      "uri": "/get/redirectToPath"
+
+    },
+    "redirectTo":"/get/newplace"
+  },
+
+
+  {
+    "description": "指定路径",
+    "request":{
+      "uri": "/get/newplace"
+
+    },
+    "response": {
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      },
+      "text":"这是一个被重定向到的地址"
+    }
+  }
+
+
+]
