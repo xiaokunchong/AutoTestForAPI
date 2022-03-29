@@ -6,15 +6,15 @@ public class multiThreadOnXml {
 
         @Test
       public void test1(){
-          System.out.printf("test1线程id是：s%n%",Thread.currentThread().getId());
+          System.out.printf("test1线程id是：%s%n",Thread.currentThread().getId());
       }
-      @Test
+       @Test
     public void test2(){
-        System.out.printf("test2线程id是：s%n%",Thread.currentThread().getId());
+        System.out.printf("test2线程id是：%s%n",Thread.currentThread().getId());
     }
-      @Test
+       @Test
     public void test3(){
-        System.out.printf("test3线程id是：s%n%",Thread.currentThread().getId());
+        System.out.printf("test3线程id是：%s%n",Thread.currentThread().getId());
     }
 
 }

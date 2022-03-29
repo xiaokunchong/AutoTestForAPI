@@ -2,7 +2,7 @@ package com.course.testNG.multiThread;
 
 import org.testng.annotations.Test;
 
-public class multiThreadOnXml {
+public class multiThreadOnXml2 {
 
         @Test
       public void test1(){
