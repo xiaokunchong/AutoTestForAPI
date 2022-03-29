@@ -1,6 +1,11 @@
-package mfapisdk.utils;
+package minpayCommonLib;
 
 
+import com.sun.org.apache.xml.internal.security.exceptions.Base64DecodingException;
+import com.sun.org.apache.xml.internal.security.utils.Base64;
+
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
 import java.io.UnsupportedEncodingException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
@@ -11,24 +16,18 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Random;
 
-import javax.crypto.Cipher;
-import javax.crypto.spec.SecretKeySpec;
-
-import com.sun.org.apache.xml.internal.security.exceptions.Base64DecodingException;
-import com.sun.org.apache.xml.internal.security.utils.Base64;
-
 
 
 
 /**
- * ¹«¹²ÖúÊÖÀà
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author dou7
  *
  */
 public class GlobalHelper {
 	
     /**
-	 * »ù±¾ÀàÐÍ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	 private static final ArrayList<String> BASE_TYPES = new ArrayList<String>(Arrays.asList("java.lang.String",
 				"int","double","long","short","byte","boolean","char","float",
@@ -54,7 +53,7 @@ public class GlobalHelper {
 
 	 
 	/**
-	 * ÅÐ¶ÏÀàÐÍÊÇ·ñÎª »ù±¾ÀàÐÍ¡¢°ü×°ÀàÐÍ¡¢StringÀàÐÍ
+	 * ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Îª ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¡ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½Í¡ï¿½Stringï¿½ï¿½ï¿½ï¿½
 	 * @return
 	 */
 	public  boolean isBaseType(Class<?> objClass)
@@ -63,7 +62,7 @@ public class GlobalHelper {
 	}
     
     /**
-     * »ñÈ¡¸ñÊ½»¯µ±Ç°Ê±¼ä
+     * ï¿½ï¿½È¡ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½Ç°Ê±ï¿½ï¿½
      */
     public String getNow(String format)
     {
@@ -73,7 +72,7 @@ public class GlobalHelper {
     }
     
     /**
-     * Ê±¼ä¸ñÊ½»¯
+     * Ê±ï¿½ï¿½ï¿½Ê½ï¿½ï¿½
      * @param date
      * @param format
      * @return
@@ -86,7 +85,7 @@ public class GlobalHelper {
     }
     
     /**
-	 * @see Éú³ÉAES256Ëæ»úÃÜÔ¿
+	 * @see ï¿½ï¿½ï¿½ï¿½AES256ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿
 	 */
 	public String randomEncryptKey()
 	{
@@ -101,8 +100,8 @@ public class GlobalHelper {
 	}
 	
 	/**
-	 * 16½øÖÆ×Ö·û´®×ª×Ö½ÚÊý¾Ý
-	 * @param hexString 16½øÖÆ×Ö·û´®
+	 * 16ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½×ªï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * @param hexString 16ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 	 * @return
 	 */
 	 public  byte[] hexStringToBytes(String hexString) 
@@ -116,8 +115,8 @@ public class GlobalHelper {
      }
 	 
 	 /**
-	  * ×Ö½ÚÊý¾Ý×ª16½øÖÆ×Ö·û´® [´óÐ´]
-	  * @param data ×Ö½ÚÊý¾Ý
+	  * ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½×ª16ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ [ï¿½ï¿½Ð´]
+	  * @param data ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½
 	  * @return
 	  */
 	 public  String bytesToHexString(byte [] data)
@@ -126,7 +125,7 @@ public class GlobalHelper {
 	 }
 	 
 	 /**
-		 * Base64±àÂë
+		 * Base64ï¿½ï¿½ï¿½ï¿½
 		 * @param data
 		 * @param encoding
 		 * @return
@@ -139,7 +138,7 @@ public class GlobalHelper {
 		
 		
 		/**
-		 * Base64±àÂë
+		 * Base64ï¿½ï¿½ï¿½ï¿½
 		 * @param data
 		 * @return
 		 */
@@ -149,7 +148,7 @@ public class GlobalHelper {
 		}
 		
 		/**
-		 * Base64½âÂë
+		 * Base64ï¿½ï¿½ï¿½ï¿½
 		 * @param base64String
 		 * @param encoding
 		 * @return
@@ -163,7 +162,7 @@ public class GlobalHelper {
 		}
 		
 		/**
-		 * Base64½âÂë
+		 * Base64ï¿½ï¿½ï¿½ï¿½
 		 * @param base64String
 		 * @return
 		 * @throws Base64DecodingException 
@@ -175,9 +174,9 @@ public class GlobalHelper {
 		}
 	 
 	/**
-     * ×Ö½ÚÊý¾Ý×ª16½øÖÆ×Ö·û´®
-     * @param data ×Ö½ÚÊý¾Ý
-     * @param useUpperCase ÊÇ·ñÊ¹ÓÃ´óÐ´×ÖÄ¸
+     * ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½×ª16ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+     * @param data ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½
+     * @param useUpperCase ï¿½Ç·ï¿½Ê¹ï¿½Ã´ï¿½Ð´ï¿½ï¿½Ä¸
      * @return
      */
 	public  String bytesToHexString(byte [] data,boolean useUpperCase)
@@ -193,7 +192,7 @@ public class GlobalHelper {
 	
 	
 	/**
-	 * AES 256 ECB ¼ÓÃÜ
+	 * AES 256 ECB ï¿½ï¿½ï¿½ï¿½
 	 * @param plaintext
 	 * @param key
 	 * @param encoding
@@ -216,7 +215,7 @@ public class GlobalHelper {
 	
 	
 	/**
-	 * AES 256 ECB ½âÃÜ
+	 * AES 256 ECB ï¿½ï¿½ï¿½ï¿½
 	 * @param ciphertext
 	 * @param key
 	 * @param encoding
@@ -235,11 +234,11 @@ public class GlobalHelper {
 	
 	
 	/** 
-     * RSAÇ©Ãû 
-     * @param content ´ýÇ©ÃûÊý¾Ý 
+     * RSAÇ©ï¿½ï¿½ 
+     * @param content ï¿½ï¿½Ç©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
      * @param privateKey Ë½Ô¿ 
-     * @param encode ×Ö·û¼¯±àÂë 
-     * @return Ç©ÃûÖµ 
+     * @param encode ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+     * @return Ç©ï¿½ï¿½Öµ 
      */  
     public  String sign(String content, PrivateKey privateKey,String encoding) throws Exception  
     {
@@ -251,16 +250,16 @@ public class GlobalHelper {
     }
     
     /** 
-     * RSAÑéÇ©Ãû¼ì²é 
-     * @param content ´ýÇ©ÃûÊý¾Ý 
-     * @param sign Ç©ÃûÖµ 
-     * @param publicKey ¹«Ô¿ 
-     * @param encode ×Ö·û¼¯±àÂë 
-     * @return ²¼¶ûÖµ 
+     * RSAï¿½ï¿½Ç©ï¿½ï¿½ï¿½ï¿½ï¿½ 
+     * @param content ï¿½ï¿½Ç©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+     * @param sign Ç©ï¿½ï¿½Öµ 
+     * @param publicKey ï¿½ï¿½Ô¿ 
+     * @param encode ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+     * @return ï¿½ï¿½ï¿½ï¿½Öµ 
      */  
      public  boolean verifySign(String content, String signValue, PublicKey publicKey,String encoding) throws Exception
      {
-    	 Signature signature = java.security.Signature.getInstance("SHA256withRSA");  
+    	 Signature signature = Signature.getInstance("SHA256withRSA");
          signature.initVerify(publicKey);  
          signature.update( content.getBytes(encoding));  
          byte[] signData = base64Decode(signValue);		
@@ -270,7 +269,7 @@ public class GlobalHelper {
      
      
      /**
-      * RSA ¹«Ô¿¼ÓÃÜ
+      * RSA ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½ï¿½
       * @param plaintext
       * @param publicKey
       * @param encoding
@@ -286,7 +285,7 @@ public class GlobalHelper {
      }
      
      /**
-      * RSAË½Ô¿¼ÓÃÜ
+      * RSAË½Ô¿ï¿½ï¿½ï¿½ï¿½
       * @param plaintext
       * @param privateKey
       * @param encoding
@@ -302,7 +301,7 @@ public class GlobalHelper {
      }
      
      /** 
-      * RSAË½Ô¿½âÃÜ
+      * RSAË½Ô¿ï¿½ï¿½ï¿½ï¿½
       * @param ciphertext
       * @param privateKey
       * @param encoding
@@ -321,7 +320,7 @@ public class GlobalHelper {
      
      
      /** 
-      * RSA¹«Ô¿ ½âÃÜ
+      * RSAï¿½ï¿½Ô¿ ï¿½ï¿½ï¿½ï¿½
       * @param ciphertext
       * @param publicKey
       * @param encoding

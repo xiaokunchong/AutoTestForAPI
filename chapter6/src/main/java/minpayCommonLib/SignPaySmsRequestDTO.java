@@ -1,4 +1,4 @@
-package com.minpay.api.bos;
+package minpayCommonLib;
 
 //import com.minpay.facade.cashier.pay.dto.base.BaseRequestDTO;
 

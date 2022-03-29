@@ -1,4 +1,4 @@
-package com.minpay.api.bos;
+package minpayCommonLib;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;

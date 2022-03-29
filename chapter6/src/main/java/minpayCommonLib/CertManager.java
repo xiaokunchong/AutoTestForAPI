@@ -1,4 +1,4 @@
-package mfipsgetway.test.cmm;
+package minpayCommonLib;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
@@ -14,7 +14,7 @@ import java.util.Enumeration;
 
 
 /**
- * Ö¤Êé¹ÜÀí
+ * Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author dou7
  *
  */
@@ -32,7 +32,7 @@ public class CertManager {
     
     
     /**
-	 * ¼ÓÔØX509Ö¤Êé¶ÔÏó
+	 * ï¿½ï¿½ï¿½ï¿½X509Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param certPath
 	 * @return
 	 * @throws CertificateException 
@@ -56,8 +56,8 @@ public class CertManager {
 	
 	
 	/**
-     * ´ÓHEX¹«Ô¿Ö¤ÊéÊý¾ÝÖÐ¼ÓÔØ¹«Ô¿
-     * @param certHexString HEX¹«Ô¿Ö¤ÊéÊý¾Ý
+     * ï¿½ï¿½HEXï¿½ï¿½Ô¿Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½Ø¹ï¿½Ô¿
+     * @param certHexString HEXï¿½ï¿½Ô¿Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      * @return
      * @throws CertificateException
      */
@@ -70,7 +70,7 @@ public class CertManager {
      }
   	 
   	 /**
-  	  * ´ÓBase64¹«Ô¿Ö¤ÊéÊý¾ÝÖÐ¼ÓÔØ¹«Ô¿
+  	  * ï¿½ï¿½Base64ï¿½ï¿½Ô¿Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½Ø¹ï¿½Ô¿
   	  * @param certBase64String
   	  * @return
   	  * @throws CertificateException
@@ -83,7 +83,7 @@ public class CertManager {
   	}
   	 
   	 /**
-  	  * ´Ó¹«Ô¿Ö¤ÊéÊý¾ÝÖÐ¼ÓÔØ¹«Ô¿X509Certificate
+  	  * ï¿½Ó¹ï¿½Ô¿Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½Ø¹ï¿½Ô¿X509Certificate
   	  * @param certData
   	  * @return
   	  * @throws CertificateException
@@ -99,7 +99,7 @@ public class CertManager {
 	
 	
 	/**
-	 * »ñÈ¡Ö¤ÊéID
+	 * ï¿½ï¿½È¡Ö¤ï¿½ï¿½ID
 	 * @param cert
 	 * @return
 	 */
@@ -112,9 +112,9 @@ public class CertManager {
 	
 	
 	/** 
-	 * ¼ì²éÖ¤ÊéµÄÓÐÐ§ÐÔ
-	 * @param cert Ö¤ÊéÎÄ¼þ
-	 * @param certChain ÉÏ¼¶Ö¤ÊéÁ´ÎÄ¼þ
+	 * ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
+	 * @param cert Ö¤ï¿½ï¿½ï¿½Ä¼ï¿½
+	 * @param certChain ï¿½Ï¼ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 	 * @return
 	 */
 	public  boolean valifyCert(X509Certificate cert, X509Certificate... certChain) 
@@ -135,9 +135,9 @@ public class CertManager {
 	
 	
 	/**
-	 * ¼ÓÔØÃÜÔ¿¿â
-	 * @param pfxPath p12Ö¤ÊéÂ·¾¶ 
-	 * @param pfxPass  p12Ö¤ÊéÃÜÂë
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿ï¿½ï¿½
+	 * @param pfxPath p12Ö¤ï¿½ï¿½Â·ï¿½ï¿½ 
+	 * @param pfxPass  p12Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @return
 	 * @throws Exception
 	 */
@@ -162,9 +162,9 @@ public class CertManager {
 	
 	
 	/**
-	 * ´Óp12Ö¤ÊéÎÄ¼þÖÐ¶ÁÈ¡Ë½Ô¿
-	 * @param pfxPath p12Ö¤ÊéÂ·¾¶ 
-	 * @param pfxPass  p12Ö¤ÊéÃÜÂë
+	 * ï¿½ï¿½p12Ö¤ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ð¶ï¿½È¡Ë½Ô¿
+	 * @param pfxPath p12Ö¤ï¿½ï¿½Â·ï¿½ï¿½ 
+	 * @param pfxPass  p12Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @return
 	 * @throws Exception
 	 */
@@ -176,9 +176,9 @@ public class CertManager {
 	
 	
 	/**
-	 * ´Óp12Ö¤ÊéÎÄ¼þÖÐ¶ÁÈ¡¹«Ô¿
-	 * @param pfxPath p12Ö¤ÊéÂ·¾¶ 
-	 * @param pfxPass  p12Ö¤ÊéÃÜÂë
+	 * ï¿½ï¿½p12Ö¤ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ð¶ï¿½È¡ï¿½ï¿½Ô¿
+	 * @param pfxPath p12Ö¤ï¿½ï¿½Â·ï¿½ï¿½ 
+	 * @param pfxPass  p12Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @return
 	 * @throws Exception
 	 */
@@ -190,9 +190,9 @@ public class CertManager {
 	
 	
 	/**
-	 * ´Óp12Ö¤ÊéÎÄ¼þÖÐ¶ÁÈ¡¹«Ô¿
-	 * @param pfxPath p12Ö¤ÊéÂ·¾¶ 
-	 * @param pfxPass  p12Ö¤ÊéÃÜÂë
+	 * ï¿½ï¿½p12Ö¤ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ð¶ï¿½È¡ï¿½ï¿½Ô¿
+	 * @param pfxPath p12Ö¤ï¿½ï¿½Â·ï¿½ï¿½ 
+	 * @param pfxPass  p12Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @return
 	 * @throws Exception
 	 */
@@ -204,9 +204,9 @@ public class CertManager {
 	
 	
 	/**
-	 * ´ÓÖ¤Êé¿â»ñÈ¡Ë½Ô¿
-	 * @param keyStore Ö¤Êé¿â
-	 * @param keyPassword ÃÜÔ¿ÃÜÂë£¬Ã»ÓÐÔòÎª¿Õ
+	 * ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½È¡Ë½Ô¿
+	 * @param keyStore Ö¤ï¿½ï¿½ï¿½
+	 * @param keyPassword ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½ë£¬Ã»ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½
 	 * @return
 	 * @throws Exception
 	 */
@@ -216,7 +216,7 @@ public class CertManager {
     	Enumeration<String> aliases = keyStore.aliases();
 		if (aliases.hasMoreElements())  
         {  
-			//È¡µÚÒ»¸ö´æ´¢±ðÃû
+			//È¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½
 			alias = (String)aliases.nextElement();  
         }   
     	char[] keyPwd = keyPassword ==null || keyPassword.equals("") ?  null : keyPassword.toCharArray();
@@ -225,8 +225,8 @@ public class CertManager {
 	
 
 	/**
-	 * ´ÓÖ¤Êé¿â»ñÈ¡¹«Ô¿
-	 * @param keyStore Ö¤Êé¿â
+	 * ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½Ô¿
+	 * @param keyStore Ö¤ï¿½ï¿½ï¿½
 	 * @return
 	 * @throws Exception
 	 */
@@ -236,15 +236,15 @@ public class CertManager {
     	Enumeration<String> aliases = keyStore.aliases();
 		if (aliases.hasMoreElements())  
         {  
-			//È¡µÚÒ»¸ö´æ´¢±ðÃû
+			//È¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½
 			alias = (String)aliases.nextElement();  
         } 
 		return  (X509Certificate)keyStore.getCertificate(alias);
 	}
 	
 	/**
-	 * ´ÓÖ¤Êé¿â»ñÈ¡¹«Ô¿
-	 * @param keyStore Ö¤Êé¿â
+	 * ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½Ô¿
+	 * @param keyStore Ö¤ï¿½ï¿½ï¿½
 	 * @return
 	 * @throws Exception
 	 */
@@ -254,8 +254,8 @@ public class CertManager {
 	}
     
 	/**
-	 * »ñÈ¡¹«Ô¿Ê®Áù½øÖÆ×Ö·û´®
-	 * @param cert ¹«Ô¿
+	 * ï¿½ï¿½È¡ï¿½ï¿½Ô¿Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+	 * @param cert ï¿½ï¿½Ô¿
 	 * @return
 	 * @throws Exception
 	 */
@@ -266,8 +266,8 @@ public class CertManager {
 	}
 	
 	/**
-	 * »ñÈ¡¹«Ô¿Ê®Áù½øÖÆ×Ö·û´®
-	 * @param publicKey ¹«Ô¿
+	 * ï¿½ï¿½È¡ï¿½ï¿½Ô¿Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+	 * @param publicKey ï¿½ï¿½Ô¿
 	 * @return
 	 */
 	public String GetCertHexData(PublicKey publicKey)

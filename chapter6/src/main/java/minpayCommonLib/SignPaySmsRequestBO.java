@@ -1,4 +1,4 @@
-package com.minpay.api.bos;
+package minpayCommonLib;
 
 import com.minpay.facade.mcorder.dto.SignPaySmsRequestDTO;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
